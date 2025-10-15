@@ -3,15 +3,12 @@ import { Text, View } from "react-native";
 import { TextInput } from 'react-native';
 import { Button } from 'react-native';
 import { Switch } from 'react-native';
+import { styles } from './styles/index.styles';
 
 export default function Index() {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      style={styles.container}
     >
       <Title></Title>
       <JoinLobby></JoinLobby>
@@ -24,14 +21,9 @@ export default function Index() {
 export function Title() {
   return (
     <View
-    style={{
-      margin: 50,
-    }}>
+    style={styles.titleContainer}>
 
-      <Text style={{
-        fontSize: 30,
-        fontWeight: 'bold',
-      }}> Proost🍻</Text>
+      <Text style={styles.titleText}> Proost🍻</Text>
 
     </View>
   )
@@ -40,21 +32,15 @@ export function Title() {
 export function JoinLobby(){
   return(
     <View
-    style={{
-      margin: 50
-    }}>
+    style={styles.joinLobbyContainer}>
       <Text
-      style={{
-        fontWeight: 'bold',
-      }}>
+      style={styles.joinLobbyTitle}>
         Join lobby</Text>
       <View
-      style={{
-        flexDirection: 'row',
-      }}>
+      style={styles.joinLobbyInputRow}>
         <TextInput
           placeholder="Typ hier de code (bv. 662011)"
-          style={{ borderWidth: 1, padding: 8 }}
+          style={styles.joinLobbyInput}
         />
         <Button title="Join" onPress={() => navigate('/lobbyScreen')} />
       </View>
@@ -66,10 +52,7 @@ export function HostGame(){
   return (
     <View>
     <Text
-    style={{
-      fontWeight: 'bold',
-      fontSize: 20
-    }}>
+    style={styles.hostGameTitle}>
       Host Game</Text>
     <Button title="Host Game" onPress={() => navigate('/hostScreen')} />
     </View>

@@ -1,12 +1,9 @@
 import { ScrollView, Text, TextInput, View } from "react-native";
+import { styles } from './styles/lobbyScreen.styles';
 
 export default function LobbyScreen() {
     return (
-        <View style={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-        }}>
+        <View style={styles.container}>
         <Title></Title>
         <PlayerList></PlayerList>
         </View>
@@ -16,14 +13,9 @@ export default function LobbyScreen() {
 export function Title() {
   return (
     <View
-    style={{
-      margin: 50,
-    }}>
+    style={styles.titleContainer}>
 
-      <Text style={{
-        fontSize: 30,
-        fontWeight: 'bold',
-      }}> Lobby scherm</Text>
+      <Text style={styles.titleText}> Lobby scherm</Text>
 
     </View>
   );
@@ -31,41 +23,34 @@ export function Title() {
 
 export function PlayerList() {
     return(
-        <View style={{
-            borderColor: "black",
-            borderWidth: 1,
-            maxHeight: 200,
-        }}>
-            <ScrollView style={{ width: '100%' }}>
-                <Text style={{
-                        fontSize: 15,
-                        fontWeight: 'bold',
-                    }}>
+        <View style={styles.playerListContainer}>
+            <ScrollView style={styles.playerListScrollView}>
+                <Text style={styles.playerListTitle}>
                         Players</Text>
                 <TextInput
                     editable={false}
                     value="Player 1"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 2"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 3"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 4"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 5"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
             </ScrollView>
         </View>

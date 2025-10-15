@@ -1,15 +1,12 @@
 import { Text, View, ScrollView } from "react-native";
 import { TextInput } from 'react-native';
 import { Button } from 'react-native';
+import { styles } from './styles/hostScreen.styles';
 
 export default function HostScreen(){
     return(
         <View
-            style={{
-            flex: 1,
-            justifyContent: "center",
-            alignItems: "center",
-        }}>
+            style={styles.container}>
             <Title></Title>
             <ShowLobbyCode></ShowLobbyCode>
             <ShowGamesSetittings></ShowGamesSetittings>
@@ -21,14 +18,9 @@ export default function HostScreen(){
 export function Title() {
   return (
     <View
-    style={{
-      margin: 50,
-    }}>
+    style={styles.titleContainer}>
 
-      <Text style={{
-        fontSize: 30,
-        fontWeight: 'bold',
-      }}> Proost🍻</Text>
+      <Text style={styles.titleText}> Proost🍻</Text>
 
     </View>
   );
@@ -37,23 +29,15 @@ export function Title() {
 export function ShowLobbyCode() {
     return(
         <View>
-            <View style={{
-                justifyContent: "center",
-                alignItems: "center",
-            }}>
-                <Text style={{
-                    fontSize: 15,
-                    fontWeight: 'bold',
-                }}>
+            <View style={styles.lobbyCodeCenter}>
+                <Text style={styles.lobbyCodeTitle}>
                     De lobby code</Text>
             </View>
-            <View style={{
-                flexDirection: 'row'
-            }}>
+            <View style={styles.lobbyCodeRow}>
                 <TextInput
                     value="278194"
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100 }}
+                    style={styles.lobbyCodeInput}
                 />
                 <Button title="Share"></Button>
             </View>
@@ -63,39 +47,29 @@ export function ShowLobbyCode() {
 
 export function ShowGamesSetittings() {
     return(
-        <View style={{
-            justifyContent: "center",
-            alignItems: "center",
-            margin: 50,
-            borderColor: "black",
-            borderWidth: 1,
-            maxHeight: 200,
-        }}>
-            <ScrollView style={{ width: '100%' }}>
-                <Text style={{
-                        fontSize: 15,
-                        fontWeight: 'bold',
-                    }}>
+        <View style={styles.gamesSettingsContainer}>
+            <ScrollView style={styles.gamesSettingsScrollView}>
+                <Text style={styles.gamesSettingsTitle}>
                         Games</Text>
                 <TextInput
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.gamesSettingsInput}
                 />
                 <TextInput
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.gamesSettingsInput}
                 />
                 <TextInput
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.gamesSettingsInput}
                 />
                 <TextInput
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.gamesSettingsInput}
                 />
                 <TextInput
                     editable={false}
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.gamesSettingsInput}
                 />
             </ScrollView>
         </View>
@@ -104,41 +78,34 @@ export function ShowGamesSetittings() {
 
 export function PlayerList() {
     return(
-        <View style={{
-            borderColor: "black",
-            borderWidth: 1,
-            maxHeight: 200,
-        }}>
-            <ScrollView style={{ width: '100%' }}>
-                <Text style={{
-                        fontSize: 15,
-                        fontWeight: 'bold',
-                    }}>
+        <View style={styles.playerListContainer}>
+            <ScrollView style={styles.playerListScrollView}>
+                <Text style={styles.playerListTitle}>
                         Players</Text>
                 <TextInput
                     editable={false}
                     value="Player 1"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 2"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 3"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 4"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
                 <TextInput
                     editable={false}
                     value="Player 5"
-                    style={{ borderWidth: 1, padding: 8, paddingInline: 100, margin: 10 }}
+                    style={styles.playerListInput}
                 />
             </ScrollView>
         </View>
