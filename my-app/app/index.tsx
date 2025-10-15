@@ -1,3 +1,4 @@
+import { navigate } from "expo-router/build/global-state/routing";
 import { Text, View } from "react-native";
 import { TextInput } from 'react-native';
 import { Button } from 'react-native';
@@ -55,7 +56,7 @@ export function JoinLobby(){
           placeholder="Typ hier de code (bv. 662011)"
           style={{ borderWidth: 1, padding: 8 }}
         />
-        <Button title="Join" onPress={() => alert('Je hebt geklikt!')} />
+        <Button title="Join" onPress={() => navigate('/lobbyScreen')} />
       </View>
     </View>
   )
@@ -70,7 +71,7 @@ export function HostGame(){
       fontSize: 20
     }}>
       Host Game</Text>
-    <Button title="Host Game" onPress={() => alert('Je hebt geklikt!')} />
+    <Button title="Host Game" onPress={() => navigate('/hostScreen')} />
     </View>
   )
 }
